@@ -40,6 +40,7 @@ números que hemos ido introduciendo por teclado. No se pueden utilizar Arrays. 
 	        }
 	        
 	        scanner.close();
+	        //FUNCIONA EN TOKEN
 	    }
 	}
 
