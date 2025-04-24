@@ -4,8 +4,6 @@ deberá elegir una opción y realizar la acción correspondiente. El programa no
 terminará hasta que seleccionemos la opción SALIR del menú principal.*/
 
 
-package utilidades;
-
 import java.util.Scanner;
 
 
@@ -18,7 +16,7 @@ public class menu {
 		entrada.close();
 	}
 	
-	public static int comprobar(Scanner entrada2) {//Cada vez que haya una entrada, el programa te manda a esta función para comprobar si es un número o algo diferente. Si es un número, el programa continua, si es algo diferente, el programa vuelve a enviar al usuario al menú principal 
+/*	public static int comprobar(Scanner entrada2) {//Cada vez que haya una entrada, el programa te manda a esta función para comprobar si es un número o algo diferente. Si es un número, el programa continua, si es algo diferente, el programa vuelve a enviar al usuario al menú principal 
 		boolean comprobacion=entrada2.hasNextInt();
 		if(comprobacion==1) {
 			
@@ -28,7 +26,7 @@ public class menu {
 		}
 		return 0;
 	}
-	
+	*/
 	
 	
 	public static void MENU(Scanner entrada2) {
