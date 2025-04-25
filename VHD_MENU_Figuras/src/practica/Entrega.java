@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Entrega {
 		
-		public static void main(String[] args) {
+		public static void main(String[] args) { //Función de scanner de entrada
 			Scanner entrada = new Scanner(System.in);
 			MENU(entrada);
 			entrada.close();
