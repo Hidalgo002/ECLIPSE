@@ -5,15 +5,27 @@ import java.util.Scanner;
 
 public class Ejercicio4 {
 
-	public static void binario(int numero) {
-		if (numero != 0||numero != 1) {
-			int ultimoNumero = numero % 10;
-			System.out.print(ultimoNumero);
-			binario(numero / 10);
+	public static boolean binario(int numero) {
+		
+		if(numero<0) {
+			return false;
 		}
 		
-	}
-	//hoy
+		while (numero>0) {
+			int ultimoNumero = numero % 10;
+			
+			if (ultimoNumero != 0 && ultimoNumero != 1) {
+				return false;
+			}
+
+		numero = numero / 10; // Avanzamos al siguiente dígito
+		
+		}//fin del while
+
+    return true; // nos dice verdadero solo si todos los numeros son cero y uno
+}
+	
+
 	
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
@@ -21,6 +33,11 @@ public class Ejercicio4 {
 		int numero = entrada.nextInt();
 		entrada.close();
 		
-		System.out.println("Resultado: " + binario(numero));
+		if(binario(numero)) {
+			System.out.println("Es un número binario.");
+		}
+		else {
+			System.out.println("No es un número binario");
+		}
 	}
 }
