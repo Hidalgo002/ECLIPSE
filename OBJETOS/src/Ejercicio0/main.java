@@ -1,16 +1,18 @@
+package Ejercicio0;
+
 import java.util.Scanner;
 
-public class AparatosElectricosMain {
+public class main {
 	public static void main(String[]args) {
 		Scanner entrada = new Scanner(System.in);
 		
-		AparatosElectricos bombilla = new AparatosElectricos(100);
+		aparatosElectricos bombilla = new aparatosElectricos(100);
 		System.out.println("Bombilla: "+bombilla.toString());
 		
-		AparatosElectricos radiador = new AparatosElectricos(2000);
+		aparatosElectricos radiador = new aparatosElectricos(2000);
 		System.out.println("Radiador: "+radiador.toString());
 		
-		AparatosElectricos plancha = new AparatosElectricos(1200);
+		aparatosElectricos plancha = new aparatosElectricos(1200);
 		System.out.println("Plancha: "+plancha.toString());
 		
 		int opcion=0;
@@ -30,7 +32,7 @@ public class AparatosElectricosMain {
 				else if (opcion2 == 2) {
 					bombilla.apagar();
 				}
-				System.out.println("Consumo Actual: "+AparatosElectricos.getConsumoInstalacion());
+				System.out.println("Consumo Actual: "+aparatosElectricos.getConsumoInstalacion());
 			break;
 			
 			case 2:
@@ -42,7 +44,7 @@ public class AparatosElectricosMain {
 				else if (opcion3 == 2){
 					radiador.apagar();
 				}
-				System.out.println("Consumo Actual: "+AparatosElectricos.getConsumoInstalacion());
+				System.out.println("Consumo Actual: "+aparatosElectricos.getConsumoInstalacion());
 			break;
 			
 			case 3:
@@ -54,11 +56,11 @@ public class AparatosElectricosMain {
 				else if (opcion4 == 2){
 					plancha.apagar();
 				}
-				System.out.println("Consumo Actual: "+AparatosElectricos.getConsumoInstalacion());
+				System.out.println("Consumo Actual: "+aparatosElectricos.getConsumoInstalacion());
 			break;
 			
 			case 4:
-				System.out.println("Consumo Actual: "+AparatosElectricos.getConsumoInstalacion());
+				System.out.println("Consumo Actual: "+aparatosElectricos.getConsumoInstalacion());
 			break;
 			
 			case 5:
@@ -74,3 +76,4 @@ public class AparatosElectricosMain {
 	entrada.close();
 	}
 }
+

@@ -1,18 +1,19 @@
+package Ejercicio0;
 
-public class AparatosElectricos {
+public class aparatosElectricos {
 
 	int consumo;
 	boolean estado; //apagado o encendido
 	static public int consumoInstalacion=0;
 
 	
-	public AparatosElectricos(int consumo, boolean estado, int consumoInstalacion) {
+	public aparatosElectricos(int consumo, boolean estado, int consumoInstalacion) {
 		super();
 		this.consumo = consumo;
 		this.estado = estado;
-		AparatosElectricos.consumoInstalacion = consumoInstalacion;
+		aparatosElectricos.consumoInstalacion = consumoInstalacion;
 	}
-	public AparatosElectricos(int consumo) {
+	public aparatosElectricos(int consumo) {
 		super();//LLama al elemento PADRE
 		this.consumo = consumo;
 		this.estado = false;
@@ -33,7 +34,7 @@ public class AparatosElectricos {
 		return consumoInstalacion;
 	}
 	public static void setConsumoInstalacion(int consumoInstalacion) {
-		AparatosElectricos.consumoInstalacion = consumoInstalacion;
+		aparatosElectricos.consumoInstalacion = consumoInstalacion;
 	}
 	@Override
 	public String toString() {
