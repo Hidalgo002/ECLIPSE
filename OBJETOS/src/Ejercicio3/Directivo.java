@@ -2,70 +2,91 @@ package Ejercicio3;
 
 enum turnos{MANANA, TARDE};
 
-public class directivo{
+public class Directivo{
 	
-		String DNI;
-		String Nombre;
-		String Apellidos;
+		String dni;
+		String nombre;
+		String apellidos;
 		float salario;
 		boolean salesiano;
 		turnos turno;
 		
 		
 		
-		public directivo(String dNI, String nombre, String apellidos, float salario, boolean salesiano, turnos turno) {
+		public Directivo(String dni, String nombre, String apellidos, float salario, boolean salesiano, turnos turno) {
 			super();
-			DNI = dNI;
-			Nombre = nombre;
-			Apellidos = apellidos;
+			this.dni = dni;
+			this.nombre = nombre;
+			this.apellidos = apellidos;
 			this.salario = salario;
 			this.salesiano = salesiano;
 			this.turno = turno;
 		}
-		
-		
-		
+
+
+
 		@Override
 		public String toString() {
-			return "directivo [DNI=" + DNI + ", Nombre=" + Nombre + ", Apellidos=" + Apellidos + ", salario=" + salario
+			return "Directivo [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salario=" + salario
 					+ ", salesiano=" + salesiano + ", turno=" + turno + "]";
 		}
 
 
 
-		public String getDNI() {
-			return DNI;
+		public String getDni() {
+			return dni;
 		}
-		public void setDNI(String dNI) {
-			DNI = dNI;
+
+
+
+		public void setDni(String dni) {
+			this.dni = dni;
 		}
+
+
+
 		public String getNombre() {
-			return Nombre;
+			return nombre;
 		}
+
+
+
 		public void setNombre(String nombre) {
-			Nombre = nombre;
+			this.nombre = nombre;
 		}
-		
-		
+
+
+
 		public String getApellidos() {
-			return Apellidos;
+			return apellidos;
 		}
+
+
+
 		public void setApellidos(String apellidos) {
-			Apellidos = apellidos;
+			this.apellidos = apellidos;
 		}
-		
-		
+
+
+
 		public float getSalario() {
 			return salario;
 		}
+
+
+
 		public void setSalario(float salario) {
 			this.salario = salario;
 		}
-		
-		
+
+
+
 		public boolean isSalesiano() {
 			return salesiano;
 		}
+
+
+
 		public void setSalesiano(boolean salesiano) {
 			this.salesiano = salesiano;
 		}
@@ -75,10 +96,16 @@ public class directivo{
 		public turnos getTurno() {
 			return turno;
 		}
+
+
+
 		public void setTurno(turnos turno) {
 			this.turno = turno;
 		}
-	
+		
+		
+		
+		
 		
 		
 }

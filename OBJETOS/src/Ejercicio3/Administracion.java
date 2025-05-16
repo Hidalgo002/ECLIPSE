@@ -1,74 +1,93 @@
 package Ejercicio3;
 
-public class administracion{
+public class Administracion{
 	
-		String DNI;
-		String Nombre;
-		String Apellidos;
+		String dni;
+		String nombre;
+		String apellidos;
 		float salario;
 		String estudios;
 		int antiguedad;
 			
 		
-		public administracion(String dNI, String nombre, String apellidos, float salario, String estudios,
+		public Administracion(String dni, String nombre, String apellidos, float salario, String estudios,
 				int antiguedad) {
 			super();
-			DNI = dNI;
-			Nombre = nombre;
-			Apellidos = apellidos;
+			this.dni = dni;
+			this.nombre = nombre;
+			this.apellidos = apellidos;
 			this.salario = salario;
 			this.estudios = estudios;
 			this.antiguedad = antiguedad;
 		}
-		
-		
-		
+
+
 		@Override
 		public String toString() {
-			return "administracion [DNI=" + DNI + ", Nombre=" + Nombre + ", Apellidos=" + Apellidos + ", salario="
+			return "Administracion [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salario="
 					+ salario + ", estudios=" + estudios + ", antiguedad=" + antiguedad + "]";
 		}
 
 
-
-
-
-		public String getDNI() {
-			return DNI;
+		public String getDni() {
+			return dni;
 		}
-		public void setDNI(String dNI) {
-			DNI = dNI;
+
+
+		public void setDni(String dni) {
+			this.dni = dni;
 		}
+
+
 		public String getNombre() {
-			return Nombre;
+			return nombre;
 		}
+
+
 		public void setNombre(String nombre) {
-			Nombre = nombre;
+			this.nombre = nombre;
 		}
+
+
 		public String getApellidos() {
-			return Apellidos;
+			return apellidos;
 		}
+
+
 		public void setApellidos(String apellidos) {
-			Apellidos = apellidos;
+			this.apellidos = apellidos;
 		}
+
+
 		public float getSalario() {
 			return salario;
 		}
+
+
 		public void setSalario(float salario) {
 			this.salario = salario;
 		}
+
+
 		public String getEstudios() {
 			return estudios;
 		}
+
+
 		public void setEstudios(String estudios) {
 			this.estudios = estudios;
 		}
+
+
 		public int getAntiguedad() {
 			return antiguedad;
 		}
+
+
 		public void setAntiguedad(int antiguedad) {
 			this.antiguedad = antiguedad;
 		}
+		
 		
 		
 		
