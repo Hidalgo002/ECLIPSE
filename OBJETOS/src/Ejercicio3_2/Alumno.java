@@ -1,7 +1,5 @@
 package Ejercicio3_2;
 
-import java.util.Arrays;
-
 enum generos{HOMBRE, MUJER}
 
 public class Alumno extends Persona{
@@ -26,10 +24,9 @@ public class Alumno extends Persona{
 
 		@Override
 		public String toString() {
-			return "Alumno [toString()=" + super.toString() + ", getDni()=" + getDni() + ", getNombre()=" + getNombre()
-					+ ", getApellidos()=" + getApellidos() + ", getSalario()=" + getSalario() + ", getClass()="
-					+ getClass() + ", hashCode()=" + hashCode() + ", fechaNacimiento=" + fechaNacimiento + ", sexo="
-					+ sexo + ", repetidor=" + repetidor + ", losModulos=" + Arrays.toString(losModulos) + "]";
+			return "DATOS ALUMNO \n    DNI: " + getDni() + "\n    NOMBRE: "
+					+ getNombre() + "\n    APELLIDOS: " + getApellidos() + "\n    FECHA DE NACIMIENTO: " + fechaNacimiento
+					+ "\n    SEXO: " + sexo + "\n    ¿ES REPETIDOR? :" + repetidor + "\n    MÓDULOS:" + losModulos;
 		}
 
 

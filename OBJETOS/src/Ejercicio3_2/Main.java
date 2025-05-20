@@ -8,7 +8,7 @@ public class Main {
     	
     	Scanner entrada = new Scanner(System.in);
   
-        Alumno[] alumnos = new Alumno[1];
+    	Modulo[] clase4 = new Modulo[1];
        
       
         menu(entrada);
@@ -18,7 +18,7 @@ public class Main {
 
  
     public static void menu(Scanner entrada) {
-        System.out.println("\n============= MENÚ =============");
+        System.out.println("\n============= MENÚ =============\n");
         System.out.println("1 - Agregar UN Profesor.");
         System.out.println("2 - Agregar UN Administrativo.");
         System.out.println("3 - Agregar UN Directivo.");
@@ -26,7 +26,7 @@ public class Main {
         System.out.println("5 - Agregar UN Alumno.");
         System.out.println("6 - Mostrar todos los datos actualmente almacenados.");
         System.out.println("7 - Salir del programa.");
-        System.out.print("Seleccione una opción: ");
+        System.out.print("\nSeleccione una opción: ");
  
         if (entrada.hasNextInt()) {
             int opcion = entrada.nextInt();
@@ -46,11 +46,11 @@ public class Main {
                 	menu(entrada);
                     break;
                 case 4:
-                    agregarModulo(entrada);
+                	//agregarAlumno(entrada);
                 	menu(entrada);
                     break;
                 case 5:
-                    //agregarAlumno(entrada);
+                    //agregarModulo(entrada);
                 	//menu(entrada);
                     break;
                 case 6:
@@ -165,37 +165,37 @@ public class Main {
 
     }
     
-    public static void agregarModulo(Scanner entrada) {
+    public static void agregarAlumno(Scanner entrada) {
         System.out.println("FORMULARIO DE DATOS DE UN MÓDULO:");
         
-        Modulo modulos = new Modulo(null, 0, null, null);
-        Modulo[] clase4 = new Modulo[1];
+        Alumno alumnos = new Alumno(null, 0, null);
+        Alumno[] clase4 = new Alumno[1];
  
 
         System.out.print("DNI: ");
-        modulos.setDni(entrada.nextLine());
+        alumnos.setDni(entrada.nextLine());
         
         System.out.print("Nombre: ");
-        modulos.setNombre(entrada.nextLine());
+        alumnos.setNombre(entrada.nextLine());
 		
 		System.out.print("Apellidos: ");
-		modulos.setApellidos(entrada.nextLine());
+		alumnos.setApellidos(entrada.nextLine());
 		
-		System.out.print("Salario: ");
-		modulos.setSalario(entrada.nextFloat());
+		System.out.print("Fecha de nacimiento: ");
+		alumnos.set(entrada.nextLine());
 		
 		System.out.print("¿Es salesiano? SÍ--> true; NO--> false. ");
-		modulos.setSalesiano(entrada.nextBoolean());
+		alumnos.setSalesiano(entrada.nextBoolean());
 		entrada.nextLine();
 
-        System.out.print("¿Durante cuál turno trabaja, MANANA o TARDE?");
-        String turnoStr = entrada.nextLine();
-        modulos.setTurno(turnos.valueOf(turnoStr.toUpperCase()));
+        System.out.print("¿Cuál es su sexo: HOMBRE o MUJER?");
+        String sexoStr = entrada.nextLine();
+        alumnos(turnos.valueOf(sexoStr.toUpperCase()));
 
-        clase4[0] = modulos;
+        clase4[0] = alumnos;
 
         System.out.println("Profesor agregado correctamente.");
-        System.out.println(modulos);
+        System.out.println(alumnos);
 
     }
     
