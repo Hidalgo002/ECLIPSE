@@ -1,78 +1,205 @@
 package Ejercicio3_2;
 
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Profesor[] clase1 = new Profesor[2];
-        Administracion[] clase2 = new Administracion[2];
-        Directivo[] clase3 = new Directivo[2];
-        Modulo[] modulos = new Modulo[2];
-        Modulo[] modulos2 = new Modulo[2];
-        Alumno[] alumnos = new Alumno[2];
+    	
+    	Scanner entrada = new Scanner(System.in);
+  
+        Alumno[] alumnos = new Alumno[1];
+       
+      
+        menu(entrada);
+        entrada.close();
+    }
+   
 
-        clase1[0] = new Profesor("53298745W", "Carmelo", "Rios", 2002, 2, true);
-        clase1[1] = new Profesor("96548513R", "Rubén", "Díaz", 1900, 2, true);
+ 
+    public static void menu(Scanner entrada) {
+        System.out.println("\n============= MENÚ =============");
+        System.out.println("1 - Agregar UN Profesor.");
+        System.out.println("2 - Agregar UN Administrativo.");
+        System.out.println("3 - Agregar UN Directivo.");
+        System.out.println("4 - Agregar UN Módulo.");
+        System.out.println("5 - Agregar UN Alumno.");
+        System.out.println("6 - Mostrar todos los datos actualmente almacenados.");
+        System.out.println("7 - Salir del programa.");
+        System.out.print("Seleccione una opción: ");
+ 
+        if (entrada.hasNextInt()) {
+            int opcion = entrada.nextInt();
+            entrada.nextLine();
 
-        clase2[0] = new Administracion("12345678A", "Laura", "Gómez", 1800,"Universitarios",5);
-        clase2[1] = new Administracion("87654321B", "Pedro", "Costa", 1700,"Universitarios",10);
-
-        clase3[0] = new Directivo("11223344C", "María", "Santos", 2500,false,turnos.MANANA);
-        clase3[1] = new Directivo("22334455D", "Carlos", "Martínez", 2600,true,turnos.TARDE);
-        
-        //MODULOS CLASE_A
-        modulos[0] = new Modulo("Matemáticas",6,clase1[0],true);
-        modulos[1] = new Modulo("Física",7,clase1[1],false);
-        
-        //MODULOS CLASE_B
-        modulos2[0] = new Modulo("Programación",8,clase1[0],true);
-        modulos2[1] = new Modulo("Base de datos",5,clase1[1],false);
-        
-        alumnos[0] = new Alumno("96548512G","Juan Manuel","Grandal","15-8-2001",generos.HOMBRE,false,modulos);
-        alumnos[1] = new Alumno("96548512G","Sonia","Costa","19-4-2001",generos.MUJER,false,modulos2);
-
-
-        
-        
-        todosTrabajadoresP(clase1);
-        todosTrabajadoresA(clase2);
-        todosTrabajadoresD(clase3);
-        todosModulos(modulos);
-        todosAlumnos(alumnos);
+            switch (opcion) {
+                case 1:
+                    agregarProfesor(entrada);
+                    menu(entrada);
+                    break;
+                case 2:
+                    agregarAdministrativo(entrada);
+                	menu(entrada);
+                    break;
+                case 3:
+                    agregarDirectivo(entrada);
+                	menu(entrada);
+                    break;
+                case 4:
+                    agregarModulo(entrada);
+                	menu(entrada);
+                    break;
+                case 5:
+                    //agregarAlumno(entrada);
+                	//menu(entrada);
+                    break;
+                case 6:
+                   // mostrarDatos(entrada);
+                	//menu(entrada);
+                    break;
+                case 7:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opción fuera de rango. Intente nuevamente.");
+            }
+        } else {
+            System.out.println("Entrada inválida. Debe ingresar un número.");
+            entrada.nextLine();
+        }
     }
     
-    static public void todosTrabajadoresP(Profesor clase1[]) {
-		System.out.println("\nMOSTRAR TODOS LOS PROFESORES:");
-		for(int i = 0; i<clase1.length;i++) {
-			System.out.println(clase1[i].toString());
-		}
-	}
-    static public void todosTrabajadoresA(Administracion clase2[]) {
-		System.out.println("\nMOSTRAR TODOS LOS ADMINISTRATIVOS:");
-		for(int i = 0; i<clase2.length;i++) {
-			System.out.println(clase2[i].toString());
-		}
-	}
-    static public void todosTrabajadoresD(Directivo clase3[]) {
-		System.out.println("\nMOSTRAR TODOS LOS DIRECTIVOS:");
-		for(int i = 0; i<clase3.length;i++) {
-			System.out.println(clase3[i].toString());
-		}
-	}
+    public static void agregarProfesor(Scanner entrada) {
+        System.out.println("FORMULARIO DE DATOS DE UN PROFESOR:");
+        
+        Profesor profesor = new Profesor(null, null, null, 0, 0, false);
+        Profesor[] clase1 = new Profesor[1];
+
+        System.out.print("DNI: ");
+        profesor.setDni(entrada.nextLine());
+        
+        System.out.print("Nombre: ");
+		profesor.setNombre(entrada.nextLine());
+		
+		System.out.print("Apellidos: ");
+		profesor.setApellidos(entrada.nextLine());
+		
+		System.out.print("Salario: ");
+		profesor.setSalario(entrada.nextFloat());
+		
+        System.out.print("Numero de Asignaturas: ");
+        profesor.setNum_Asignaturas(entrada.nextInt());
+        entrada.nextLine();
+
+        System.out.print("¿Es tutor? SÍ--> true; NO--> false. ");
+        profesor.setTutor(entrada.nextBoolean());
+        entrada.nextLine();
+
+        clase1[0] = profesor;
+
+        System.out.println("Profesor agregado correctamente.");
+        System.out.println(profesor);
+    }
+		
+    public static void agregarAdministrativo(Scanner entrada) {
+        System.out.println("FORMULARIO DE DATOS DE UN ADMINISTRATIVO:");
+        
+        Administracion admin = new Administracion(null, null, null, 0,null,0);
+        Administracion[] clase2 = new Administracion[1];
+
+        System.out.print("DNI: ");
+        admin.setDni(entrada.nextLine());
+        
+        System.out.print("Nombre: ");
+        admin.setNombre(entrada.nextLine());
+		
+		System.out.print("Apellidos: ");
+		admin.setApellidos(entrada.nextLine());
+		
+		System.out.print("Salario: ");
+		admin.setSalario(entrada.nextFloat());
+		
+        System.out.print("Indique el nivel de estudios: ");
+        admin.setEstudios(entrada.nextLine());
+
+        System.out.print("¿Cuántos años de antigüedad posee el administrativo? ");
+        admin.setAntiguedad(entrada.nextInt());
+
+        clase2[0] = admin;
+
+        System.out.println("Administrativo agregado correctamente.");
+        System.out.println(admin);
+    }
+
+    public static void agregarDirectivo(Scanner entrada) {
+        System.out.println("FORMULARIO DE DATOS DE UN DIRECTIVO:");
+        
+        Directivo direct = new Directivo(null, null, null, 0, false,null);
+        Directivo[] clase3 = new Directivo[1];
+ 
+
+        System.out.print("DNI: ");
+        direct.setDni(entrada.nextLine());
+        
+        System.out.print("Nombre: ");
+        direct.setNombre(entrada.nextLine());
+		
+		System.out.print("Apellidos: ");
+		direct.setApellidos(entrada.nextLine());
+		
+		System.out.print("Salario: ");
+		direct.setSalario(entrada.nextFloat());
+		
+		System.out.print("¿Es salesiano? SÍ--> true; NO--> false. ");
+		direct.setSalesiano(entrada.nextBoolean());
+		entrada.nextLine();
+
+        System.out.print("¿Durante cuál turno trabaja, MANANA o TARDE?");
+        String turnoStr = entrada.nextLine();
+        direct.setTurno(turnos.valueOf(turnoStr.toUpperCase()));
+
+        clase3[0] = direct;
+
+        System.out.println("Directivo agregado correctamente.");
+        System.out.println(direct);
+
+    }
     
-    static public void todosModulos(Modulo[] modulos) {
-		System.out.println("\nMOSTRAR TODOS LOS MÓDULOS:");
-		for(int i = 0; i<modulos.length;i++) {
-			System.out.println(modulos[i].toString());
-		}
-	}
+    public static void agregarModulo(Scanner entrada) {
+        System.out.println("FORMULARIO DE DATOS DE UN MÓDULO:");
+        
+        Modulo modulos = new Modulo(null, 0, null, null);
+        Modulo[] clase4 = new Modulo[1];
+ 
+
+        System.out.print("DNI: ");
+        modulos.setDni(entrada.nextLine());
+        
+        System.out.print("Nombre: ");
+        modulos.setNombre(entrada.nextLine());
+		
+		System.out.print("Apellidos: ");
+		modulos.setApellidos(entrada.nextLine());
+		
+		System.out.print("Salario: ");
+		modulos.setSalario(entrada.nextFloat());
+		
+		System.out.print("¿Es salesiano? SÍ--> true; NO--> false. ");
+		modulos.setSalesiano(entrada.nextBoolean());
+		entrada.nextLine();
+
+        System.out.print("¿Durante cuál turno trabaja, MANANA o TARDE?");
+        String turnoStr = entrada.nextLine();
+        modulos.setTurno(turnos.valueOf(turnoStr.toUpperCase()));
+
+        clase4[0] = modulos;
+
+        System.out.println("Profesor agregado correctamente.");
+        System.out.println(modulos);
+
+    }
     
-    static public void todosAlumnos(Alumno[] alumnos) {
-		System.out.println("\nMOSTRAR TODOS LOS ALUMNOS:");
-		for(int i = 0; i<alumnos.length;i++) {
-			System.out.println(alumnos[i].toString());
-		}
-	}
+	
 }
 
 

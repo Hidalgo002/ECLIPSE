@@ -2,10 +2,10 @@ package Ejercicio3_2;
 
 public class Modulo {
 		
-		String nombre;
-		int horas;
-		Profesor unProfe;
-		boolean convalidable;
+		private String nombre;
+		private int horas;
+		private Profesor unProfe;
+		private boolean convalidable;
 		
 		
 		public Modulo(String nombre, int horas, Profesor unProfe, boolean convalidable) {

@@ -6,10 +6,10 @@ enum generos{HOMBRE, MUJER}
 
 public class Alumno extends Persona{
 	
-		String fechaNacimiento;
-		generos sexo;
-		boolean repetidor;
-		Modulo [] losModulos;
+		private String fechaNacimiento;
+		private generos sexo;
+		private boolean repetidor;
+		private Modulo [] losModulos;
 		
 		public Alumno(String dni, String nombre, String apellidos, String fechaNacimiento, generos sexo,
 				boolean repetidor, Modulo[] losModulos) {
@@ -21,12 +21,18 @@ public class Alumno extends Persona{
 		}
 		
 
+		
+
+
 		@Override
 		public String toString() {
-			return "Alumno [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salario=" + salario
-					+ ", fechaNacimiento=" + fechaNacimiento + ", sexo=" + sexo + ", repetidor=" + repetidor
-					+ ", losModulos=" + Arrays.toString(losModulos) + "]";
+			return "Alumno [toString()=" + super.toString() + ", getDni()=" + getDni() + ", getNombre()=" + getNombre()
+					+ ", getApellidos()=" + getApellidos() + ", getSalario()=" + getSalario() + ", getClass()="
+					+ getClass() + ", hashCode()=" + hashCode() + ", fechaNacimiento=" + fechaNacimiento + ", sexo="
+					+ sexo + ", repetidor=" + repetidor + ", losModulos=" + Arrays.toString(losModulos) + "]";
 		}
+
+
 
 
 

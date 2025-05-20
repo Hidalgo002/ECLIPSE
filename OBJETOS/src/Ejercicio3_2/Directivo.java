@@ -3,10 +3,9 @@ package Ejercicio3_2;
 enum turnos{MANANA, TARDE};
 
 public class Directivo extends Persona{
-	
 		
-		boolean salesiano;
-		turnos turno;
+		private boolean salesiano;
+		private	turnos turno;
 		
 		
 		
@@ -18,12 +17,17 @@ public class Directivo extends Persona{
 
 
 
-
 		@Override
 		public String toString() {
-			return "Directivo [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salario=" + salario
-					+ ", salesiano=" + salesiano + ", turno=" + turno + "]";
+			return "DATOS DIRECTIVO \n    DNI: " + getDni() + "\n    NOMBRE: "
+					+ getNombre() + "\n    APELLIDOS: " + getApellidos() + "\n    SALARIO: " + getSalario()
+					+ " €\n    SALESIANO: " + salesiano + "\n    TURNO:" + turno;
 		}
+
+
+
+
+
 
 
 

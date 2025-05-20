@@ -2,10 +2,10 @@ package Ejercicio3_2;
 
 public class Persona {
 	
-		String dni;
-		String nombre;
-		String apellidos;
-		float salario;
+		private String dni;
+		private String nombre;
+		private String apellidos;
+		private float salario;
 		
 		
 		public Persona(String dni, String nombre, String apellidos, float salario) {
@@ -29,32 +29,40 @@ public class Persona {
 					+ "]";
 		}
 
-
-
 		public String getDni() {
 			return dni;
 		}
+
 		public void setDni(String dni) {
 			this.dni = dni;
 		}
+
 		public String getNombre() {
 			return nombre;
 		}
+
 		public void setNombre(String nombre) {
 			this.nombre = nombre;
 		}
+
 		public String getApellidos() {
 			return apellidos;
 		}
+
 		public void setApellidos(String apellidos) {
 			this.apellidos = apellidos;
 		}
+
 		public float getSalario() {
 			return salario;
 		}
+
 		public void setSalario(float salario) {
 			this.salario = salario;
 		}
-		
+
+
+
+	
 		
 }
