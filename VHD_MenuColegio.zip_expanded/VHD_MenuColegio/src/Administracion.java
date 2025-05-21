@@ -1,6 +1,3 @@
-package Ejercicio3_2;
-
-
 
 public class Administracion extends Persona{
 		

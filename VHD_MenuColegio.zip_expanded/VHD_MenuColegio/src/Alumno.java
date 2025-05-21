@@ -1,5 +1,3 @@
-package Ejercicio3_2;
-
 
 enum generos{HOMBRE, MUJER}
 

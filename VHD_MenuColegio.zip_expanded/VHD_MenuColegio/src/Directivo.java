@@ -1,5 +1,3 @@
-package Ejercicio3_2;
-
 enum turnos{MANANA, TARDE};
 
 public class Directivo extends Persona{
