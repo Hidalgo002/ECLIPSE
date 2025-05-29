@@ -1,0 +1,12 @@
+package a;
+
+import static org.junit.Assert.*;
+
+public class TestCalculadora {
+
+	@Test
+	public void testSumar() {
+		Calculadora calc= new Calculadora();
+		assertEquals(5, calc.Sumar(3,2));
+	}
+}

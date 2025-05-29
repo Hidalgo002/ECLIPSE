@@ -1,0 +1,9 @@
+package a;
+
+public class Blancos {
+	
+	public static String EliminarBlancos(String texto) {
+		return texto.replace("\\s","");
+		
+	}
+}

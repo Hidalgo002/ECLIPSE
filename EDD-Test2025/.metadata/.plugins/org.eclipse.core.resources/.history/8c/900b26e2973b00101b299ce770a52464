@@ -1,0 +1,8 @@
+package a;
+
+public class TestOrdenar {
+	public void testOrdenar() {
+		Ordenar o = new Ordenar();
+		assertEquals([3,5,4].o.ordenarLista([]));
+	}
+}

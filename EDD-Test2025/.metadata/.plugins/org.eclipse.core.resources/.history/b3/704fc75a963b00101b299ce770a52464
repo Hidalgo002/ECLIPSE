@@ -1,0 +1,11 @@
+package a;
+
+import static org.junit.Assert.*;
+
+public class TestCalculadora {
+
+	@Test
+	public void testSumar() {
+		assertEqual(5, Sumar(3,2));
+	}
+}

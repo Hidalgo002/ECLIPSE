@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\Dam\Downloads\Test2025\Test2025\.metadata\.plugins\org.eclipse.jdt.core
+3428584399.index
+2058784059.index
+1865797976.index
+2484754253.index

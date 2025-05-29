@@ -1,0 +1,14 @@
+package a;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.experimental.theories.suppliers.TestedOn;
+
+public class testBlancos {
+	
+	@TestedOn
+	public void testEspacioBlanco() {
+		Blancos b = new Blancos();
+		assertEquals("holaquetal", Blancos.EliminarBlancos("hola que tal"));
+	}
+}

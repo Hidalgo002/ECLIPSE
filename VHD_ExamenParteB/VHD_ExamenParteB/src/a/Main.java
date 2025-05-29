@@ -1,0 +1,71 @@
+package a;
+
+import java.util.Scanner;
+
+public class Main {
+	static float pi=3.1415926535897932384626433832795f;
+	
+
+	public static void main(String[]args) {
+		Scanner entrada = new Scanner(System.in);
+		menu(entrada);
+		entrada.close();
+	}
+	
+	public static void menu(Scanner entrada) {
+		int bandera = 0;
+		
+		do {
+		System.out.println("\n=============MENÚ=============");
+		System.out.println("1. Calcular el área de un cilindro.");
+		System.out.println("2. Calcular el volúmen de un cilindro.");
+		System.out.println("3. Salir del programa.");
+		System.out.print("\nSeleccione una opción (numérica): ");
+		int opcion = entrada.nextInt();
+		
+		switch (opcion){
+		case 1:
+			area(entrada);
+			break;
+		case 2:
+			volumen(entrada);
+			break;
+		case 3:
+			System.out.println("Saliendo del programa.");
+			bandera = 1;
+			break;
+		default:
+			System.out.println("No es una opción válida.");
+		}
+		
+		}while(bandera==0);
+	}
+	
+	public static void area(Scanner entrada) {
+		System.out.print("\nIntroduzca el diámetro del cilindro: ");
+		float diametro = entrada.nextFloat();
+		System.out.print("Introduzca la altura del cilindro: ");
+		float h = entrada.nextFloat();
+		
+		float r = diametro/2;
+		
+		float areaL=2*pi*(r*r)+2*pi*(r*h);
+		
+		System.out.print("\nEl área del cilindro es: "+areaL+"\n");		
+		
+	}
+	
+	public static void volumen(Scanner entrada) {
+		System.out.print("\nIntroduzca el diámetro del cilindro: ");
+		float diametro = entrada.nextFloat();
+		System.out.print("Introduzca la altura del cilindro: ");
+		float h = entrada.nextFloat();
+		
+		float r = diametro/2;
+		
+		float volumenL=pi*(r*r)*h;
+		
+		System.out.print("\nEl volumen del cilindro es: "+volumenL+"\n");	
+		
+	}
+}

@@ -1,0 +1,24 @@
+package a;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
+import org.junit.Test;
+
+public class TestOrdenar {
+
+    @Test
+    public void testOrdenar() {
+        Ordenar o = new Ordenar();
+        List<Integer> a = null;
+        a.add(3);
+        a.add(1);
+        
+        List<Integer> b = null;
+        a.add(1);
+        a.add(3);
+        
+        assertEquals(a, o.ordenarLista(b));
+    }
+}
